@@ -1,0 +1,131 @@
+// console.log('server file is running');
+
+// function add(a, b) {
+//     return a+b;
+// }
+
+// var add = function(a,b) {
+//     return a+b;
+// }
+
+// var add = (a, b) =>  a+b;
+
+// var result = add(2, 11);
+// console.log(result);
+
+// (function() {
+//     console.log("function is added");
+// })();
+
+// function callback() {
+//     console.log("I am calling a callback Function");
+// }
+
+// const add = function(a, b, callback) {
+//     var result = a+b;
+//     console.log(result); // main function call complete
+//     callback();
+// }
+
+// add(3, 4, callback);
+
+// const sub = function(a, b, afterSub) {
+//     var result = a-b;
+//     console.log(result); // main function call complete
+//     afterSub();
+// }
+
+// sub(5,2, function(){
+//     console.log("Next callback Function running after performing substraction");
+
+// })
+
+// sub(5,2, () => console.log("Next callback Function running after performing substraction"))
+
+var os = require('os');
+var fs = require('fs');
+var user = os.userInfo();
+// console.log(os);
+// console.log(fs);
+// console.log(user.username);
+
+// fs.appendFile('greeting.txt', 'Hi ' + user.username + '!\n', ()=> {console.log('File is created')});
+
+// const notes = require('./notes.js');
+// var _ = require('lodash');
+// console.log("Server file is available");
+
+// var age = notes.age;
+// console.log(age);
+// var result = notes.addNumber(age+10, 18);
+// console.log(result);
+
+// var data = ["person", "person", 1, 1, 'name', 'age', '2'];
+// var filter = _.uniq(data);
+// console.log(filter);
+
+// console.log(_.isString('3'));
+
+// const JSONString = '{"name": "Alice", "age": 30, "city": "New York"}';
+// const JSONObject = JSON.parse(JSONString);
+// console.log(JSONObject.name);
+
+// const ObjectToConvert = {
+//     name:"Mayuri",
+//     age: 61,
+//     city: "Udaypur"
+// }
+
+// const JsonStringify = JSON.stringify(ObjectToConvert);
+// console.log(JsonStringify);
+
+// console.log(typeof JsonStringify);
+
+
+
+///////////////////
+
+//POST route to add a person - Will not work
+// app.post('/person', (req, res) => {
+//     const data = req.body // Assuming the request body contains the person data
+
+//     //Create a new Person document using the Mongoose model
+//     const newPerson = new Person(data);
+//     // newPerson.name = data.name;
+//     // newPerson.mobile = data.mobile;
+//     // newPerson.age = data.age;
+//     // newPerson.email = data.email;
+//     // newPerson.address = data.address;
+//     newPerson.save((error, savedPerson) => {
+//         if(error) {
+//             console.log('Error saving person data', error);
+//             res.status(500).json({error: 'Internal server error'})
+//         }
+//         else {
+//             console.log('data saved successfully');
+//             res.status(200).json(savedPerson);
+//         }
+//     })
+// })
+
+////////////////////////////
+
+// app.get('/paneer', (req, res) => {
+//     res.send('Sure sir I would love to serve you paneer');
+// })
+
+// app.get('/idli', (req, res) => {
+
+//     var customised_idli = {
+//         name: 'rava idli',
+//         size: '10 cm diameter',
+//         is_sambhar: true,
+//         is_chutney: false
+//     }
+//     res.send(customised_idli);
+//     // res.send('Welcome to South India and would love yo serve IDLI');
+// })
+
+// app.post('/person', (req, res) => {
+//     res.send('data is saved');
+// })
