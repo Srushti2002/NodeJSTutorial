@@ -84,6 +84,7 @@ router.delete('/:id', async (req, res) => {
         console.log('Data deleted');
         res.status(200).json({message: 'Menu Deleted Successfully'})
     }
+
     
     catch(err) {
         console.log(err);
@@ -91,4 +92,5 @@ router.delete('/:id', async (req, res) => {
     }
 })
 
+//comment for testing purpose
 module.exports = router;
